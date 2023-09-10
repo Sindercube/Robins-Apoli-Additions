@@ -4,7 +4,6 @@
   "package": "io.github.thatrobin.ra_additions.mixins",
   "compatibilityLevel": "JAVA_17",
   "mixins": [
-    "AnimationProcessorMixin",
     "EntitySelectorOptionsAccessor",
     "ItemFrameEntityMixin",
     "ItemMixin",
@@ -16,14 +15,19 @@
   ],
   "client": [
     "ApoliClientAccessorMixin",
-    "ArmorFeatureRendererMixin",
     "BossBarHudMixin",
-    "GeoArmorRendererAccessor",
     "KeyBindingMixin",
     "KeyBindingRegistryImplAccessor",
     "KeyBindingRegistryImplMixin",
     "LivingEntityRendererMixin",
     "MinecraftClientMixin"
+  ],
+  "mixins_off": [
+    "AnimationProcessorMixin"
+  ],
+  "client_off": [
+    "ArmorFeatureRendererMixin",
+    "GeoArmorRendererAccessor"
   ],
   "injectors": {
     "defaultRequire": 1

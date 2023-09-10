@@ -14,21 +14,30 @@
             "io.github.thatrobin.ra_additions.data.DataGener"
         ],
         "client": [
-            "io.github.thatrobin.ra_additions.client.RA_AdditionsClient"
+            "io.github.thatrobin.ra_additions.client.RA_AdditionsClient",
+            "io.github.thatrobin.ra_additions_choices.client.RAA_Choices_Client",
+            "io.github.thatrobin.ra_additions_goals.client.RAA_Goals_Client"
         ],
         "main": [
-            "io.github.thatrobin.ra_additions.RA_Additions"
+            "io.github.thatrobin.ra_additions.RA_Additions",
+            "io.github.thatrobin.ra_additions_choices.RAA_Choices",
+            "io.github.thatrobin.ra_additions_goals.RAA_Goals",
+            "io.github.thatrobin.ra_additions_tags.RAA_Tags"
+        ],
+        "cardinal-components-entity": [
+            "io.github.thatrobin.ra_additions_choices.component.ModComponents"
         ],
         "server": [
             "io.github.thatrobin.ra_additions.RA_AdditionsServer"
         ],
         "calio:ordered-resource-listener": [
-            "io.github.thatrobin.ra_additions.RA_Additions"
+            "io.github.thatrobin.ra_additions.RA_Additions",
+            "io.github.thatrobin.ra_additions_choices.RAA_Choices"
         ]
     },
     "custom": {
         "cardinal-components": [
-            "ra_additions:claim_data"
+            "ra_additions:choice"
         ],
         "modmenu": {
             "badges": [
@@ -40,12 +49,16 @@
         }
     },
     "mixins": [
-        "ra_additions.mixins.json"
+        "ra_additions.mixins.json",
+        "ra_additions_choices.mixins.json",
+        "ra_additions_goals.mixins.json",
+        "ra_additions_tags.mixins.json"
     ],
     "accessWidener": "ra_additions.accesswidener",
     "depends": {
-        "fabricloader": ">=0.14.21",
+        "fabricloader": ">=0.14.11",
+        "minecraft": "1.20.x",
         "fabric": "*",
-        "minecraft": "1.20.x"
+        "origins": ">=1.10.0"
     }
 }

@@ -19,7 +19,7 @@ public class PowerFactories {
         register(BindPower.createFactory(), "Makes certain items unable to leave in the entity's inventory until death.");
         register(BossBarPower.createFactory(), "Defines a boss bar for the player. Essentially identical to a [Resource Bar](https://origins.readthedocs.io/en/latest/types/power_types/resource/) but displays as a boss bar.");
         register(BundlePower.createFactory(), "Allows an item to be used like a bundle, with a customizable capacity.");
-        register(CustomModelRenderPower.createFactory(), "Allows a GeckoLib model to be rendered on the player.");
+//        register(CustomModelRenderPower.createFactory(), "Allows a GeckoLib model to be rendered on the player.");
         register(CustomTogglePower.createFactory(), "A custom version of Apoli's [Toggle (Power Type)](https://origins.readthedocs.io/en/latest/types/power_types/toggle/)");
         register(StatBarPower.createFactory(), "Defines a stat bar for the player. Holds a persistent integer value between 0, and 20.");
         register(ValuePower.createFactory(), "Defines a value for the player. Essentially identical to a [Resource Bar](https://origins.readthedocs.io/en/latest/types/power_types/resource/) but displays as number in a string.");

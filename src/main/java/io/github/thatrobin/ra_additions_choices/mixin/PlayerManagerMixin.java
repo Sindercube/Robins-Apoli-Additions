@@ -29,6 +29,7 @@ public abstract class PlayerManagerMixin {
 
     @Inject(at = @At("TAIL"), method = "onPlayerConnect(Lnet/minecraft/network/ClientConnection;Lnet/minecraft/server/network/ServerPlayerEntity;)V")
     private void openChoiceGui(ClientConnection connection, ServerPlayerEntity player, CallbackInfo info) {
+        /*
         ChoiceComponent component = ModComponents.CHOICE.get(player);
 
         PacketByteBuf choiceListData = new PacketByteBuf(Unpooled.buffer());
@@ -58,5 +59,6 @@ public abstract class PlayerManagerMixin {
         playerList.forEach(spe -> ModComponents.CHOICE.syncWith(spe, (ComponentProvider)player));
         ChoiceComponent.sync(player);
         component.sync();
+        */
     }
 }

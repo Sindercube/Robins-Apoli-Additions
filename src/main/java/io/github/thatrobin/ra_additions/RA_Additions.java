@@ -6,7 +6,7 @@ import io.github.apace100.calio.resource.OrderedResourceListenerManager;
 import io.github.thatrobin.ra_additions.commands.*;
 import io.github.thatrobin.ra_additions.networking.RAA_ModPacketC2S;
 import io.github.thatrobin.ra_additions.powers.factories.*;
-import io.github.thatrobin.ra_additions.registry.ItemRegistry;
+//import io.github.thatrobin.ra_additions.registry.ItemRegistry;
 import io.github.thatrobin.ra_additions.util.*;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.command.v2.CommandRegistrationCallback;
@@ -16,7 +16,7 @@ import net.minecraft.resource.ResourceType;
 import net.minecraft.util.Identifier;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import software.bernie.geckolib.GeckoLib;
+//import software.bernie.geckolib.GeckoLib;
 
 import java.io.File;
 import java.io.IOException;
@@ -54,8 +54,8 @@ public class RA_Additions implements ModInitializer, OrderedResourceListenerInit
         ItemConditions.register();
         ItemActions.register();
 
-        GeckoLib.initialize();
-        ItemRegistry.register();
+//        GeckoLib.initialize();
+//        ItemRegistry.register();
         NamespaceAlias.addAlias(MODID, "apoli");
         NamespaceAlias.addAlias("origins", "apoli");
 

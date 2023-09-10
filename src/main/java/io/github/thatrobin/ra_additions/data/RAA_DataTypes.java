@@ -1,7 +1,7 @@
 package io.github.thatrobin.ra_additions.data;
 
-import com.google.common.collect.HashBiMap;
-import com.google.common.collect.ImmutableMap;
+//import com.google.common.collect.HashBiMap;
+//import com.google.common.collect.ImmutableMap;
 import io.github.apace100.apoli.data.ApoliDataTypes;
 import io.github.apace100.calio.ClassUtil;
 import io.github.apace100.calio.data.SerializableData;
@@ -12,16 +12,16 @@ import io.github.thatrobin.docky.utils.SerializableDataExt;
 import io.github.thatrobin.docky.utils.SerializableDataTypeExt;
 import io.github.thatrobin.docky.utils.SerializableDataTypesRegistry;
 import io.github.thatrobin.ra_additions.RA_Additions;
-import io.github.thatrobin.ra_additions.client.TestArmorItem;
-import io.github.thatrobin.ra_additions.registry.ItemRegistry;
+//import io.github.thatrobin.ra_additions.client.TestArmorItem;
+//import io.github.thatrobin.ra_additions.registry.ItemRegistry;
 import io.github.thatrobin.ra_additions.util.*;
-import net.minecraft.entity.EquipmentSlot;
+//import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.recipe.RecipeType;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.Identifier;
-import net.minecraft.util.Pair;
+//import net.minecraft.util.Pair;
 
 import java.util.List;
 
@@ -145,18 +145,18 @@ public class RAA_DataTypes {
                 return data;
             });
 
-    public static final SerializableDataType<Pair<EquipmentSlot, TestArmorItem>> DISPLAY_MODEL_TYPE =
-            SerializableDataTypeExt.mapped(
-                    "display_model_type",
-                    "A [String](string.md) used to define which piece of armour a display model should be rendered on",
-                    ClassUtil.castClass(Pair.class), HashBiMap.create(ImmutableMap.of(
-                    "head", new Pair<>(EquipmentSlot.HEAD,ItemRegistry.POWER_ARMOR_HELMET),
-                    "chest", new Pair<>(EquipmentSlot.CHEST,ItemRegistry.POWER_ARMOR_CHESTPLATE),
-                    "legs", new Pair<>(EquipmentSlot.LEGS,ItemRegistry.POWER_ARMOR_LEGGINGS),
-                    "feet", new Pair<>(EquipmentSlot.FEET,ItemRegistry.POWER_ARMOR_BOOTS)
-            )));
-
-    public static final SerializableDataType<List<Pair<EquipmentSlot, TestArmorItem>>> DISPLAY_MODEL_TYPES = SerializableDataTypeExt.list(RAA_DataTypes.DISPLAY_MODEL_TYPE);
+//    public static final SerializableDataType<Pair<EquipmentSlot, TestArmorItem>> DISPLAY_MODEL_TYPE =
+//            SerializableDataTypeExt.mapped(
+//                    "display_model_type",
+//                    "A [String](string.md) used to define which piece of armour a display model should be rendered on",
+//                    ClassUtil.castClass(Pair.class), HashBiMap.create(ImmutableMap.of(
+//                    "head", new Pair<>(EquipmentSlot.HEAD,ItemRegistry.POWER_ARMOR_HELMET),
+//                    "chest", new Pair<>(EquipmentSlot.CHEST,ItemRegistry.POWER_ARMOR_CHESTPLATE),
+//                    "legs", new Pair<>(EquipmentSlot.LEGS,ItemRegistry.POWER_ARMOR_LEGGINGS),
+//                    "feet", new Pair<>(EquipmentSlot.FEET,ItemRegistry.POWER_ARMOR_BOOTS)
+//            )));
+//
+//    public static final SerializableDataType<List<Pair<EquipmentSlot, TestArmorItem>>> DISPLAY_MODEL_TYPES = SerializableDataTypeExt.list(RAA_DataTypes.DISPLAY_MODEL_TYPE);
 
     public static final SerializableDataType<ItemStack> ITEM_OR_ITEM_STACK = new SerializableDataType<>(ItemStack.class,
             SerializableDataTypes.ITEM_STACK::send, SerializableDataTypes.ITEM_STACK::receive, jsonElement -> {
